@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="bg">
+    <div class="content">
+      <div class="parent">
+        
+        <div class="left_div">
+          <p class="title">Mr. or Ms.?</p>
+          <form id="form_predict" name="myForm">
+            <div class="flexRow_div">
+              <label class="name_label" for="name">Name:</label>
+              <input type="text" id="name" name="name" maxlength="255" />
+            </div>
+            <div class="radio_div">
+              <div class="flexRow_div">
+                <input type="radio" id="Male" name="choice" value="Male" />
+                 <label for="Male">Male</label>
+              </div>
+              <div class="flexRow_div">
+                <input type="radio" id="Female" name="choice" value="Female" />
+                <label for="Female">Female</label>
+              </div>
+            </div>
+            <input class="submit_btn" type="submit" value="Submit" onclick="sendToBaseUrl()"/>
+            <button class="save_btn" onclick="save_name()">save</button>
+          </form>
+        </div>
+
+        <div class="right_div">
+          <div>
+            <p class="prediction">Prediction</p>
+            <p id="gender">gender</p>
+            <p id="prob">probability</p>
+          </div>
+
+          <div class="save-div" id="save-div-id">
+            <p class="saved_answers" id="saved_answers_id">Saved Answers</p>
+            <p id="save_gender">gender</p>
+            <button id="clear_btn" onclick="delete_saved_name()">clear</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="./js/myscripts.js"></script>
+</body>
+
+</html>
