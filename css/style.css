@@ -4,8 +4,9 @@ html {
   margin: 0;
 }
 
+/* this class is for fullscreen backgound */
 .bg {
-  /* The image used */
+  /* The image used from this path*/
   background-image: url("../image/bg.jpg");
 
   /* Full height */
@@ -17,70 +18,104 @@ html {
   background-size: cover;
 }
 
+/* make the content display in the center position 
+and also add border and some padiing
+also make the background transparent by rgba and the last parameter is for the 
+transparency scale*/
 .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6); /*make content background transparent*/
   padding: 30px;
   border-radius: 25px;
 }
+
+/* make the display flex for all children */
 .parent {
   display: flex;
 }
 
+/* # is beacuse of id (calsses starts with dot)
+make the predict form part fle and add padding for some good spaces
+the padding numbers are clockwise and the first one is for top */
 #form_predict {
   display: flex;
   flex-direction: column;
   padding: 10px 10px 10px 0px;
 }
+
+/* for  "Mr. or Ms.?"  title to make it bold and increase the font size
+also add a bottom margin for some space */
 .title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
+/* flex the display and marginfor some good spaces
+the padding numbers are clockwise and the first one is for top */
 .flexRow_div {
   display: flex;
   margin: 10px 20px 10px 0px;
 }
+
+/* add a 20 pixel space to the right side of name lable to be more beautiful */
 .name_label {
   margin-right: 20px;
 }
+
+/* flex the radio buttuns by direction column and 
+clockwise margin for some space around them */
 .radio_div {
   display: flex;
   flex-direction: column;
   margin: 20px 20px 20px 0px;
 }
+
+/* make the submit button be in good and regular size */
 .submit_btn{
     width:60px;
 }
 
+/* make the save button be in good and regular size
+also add a 10 pixel space from the top */
 .save_btn{
   width:60px;
   margin-top: 10px;
 }
 
+/* flex the left side of content by the flex direction of column */
 .left_div {
   display: flex;
   flex-direction: column;
 }
 
+/* flex the right side of content by the flex direction of column also add some 
+margin spaces and fix the width of the right side for text to show good in a line */
 .right_div {
   display: flex;
   flex-direction: column;
   width: 150px;
   margin: 0px 20px 20px 30px;
 }
+
+/* make the paragraf bold and increase the font size */
 .prediction {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* make the paragraf bold and increase the font size */
 .saved_answers {
   font-size: 18px;
   font-weight: bold;
 }
+
+/* make this block to display in the correct position 
+and also add border in dotted darkgrey color style to show that it's not permamanent
+and some padiing and margin*/
 .save-div {
   margin-top: 40px;
   padding-left: 10px;
