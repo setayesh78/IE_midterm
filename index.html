@@ -5,21 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- link the classes and other style codes to style.css -->
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
+  <!-- this class is for full screen background -->
   <div class="bg">
+    <!-- for content and the color of it's background -->
     <div class="content">
+      <!-- use parent for flex -->
       <div class="parent">
-        
+        <!-- the laft side part for getting name and add buttons and lables and paragrafs -->
         <div class="left_div">
           <p class="title">Mr. or Ms.?</p>
+          <!-- make a form for predict part -->
           <form id="form_predict" name="myForm">
+            <!-- for making the row to flex for this block -->
             <div class="flexRow_div">
               <label class="name_label" for="name">Name:</label>
+              <!-- check the max number of charachter that can get from input ""maxlength="255"" -->
               <input type="text" id="name" name="name" maxlength="255" />
             </div>
+            <!-- adding the two radio buttuns in left side by flex row -->
             <div class="radio_div">
               <div class="flexRow_div">
                 <input type="radio" id="Male" name="choice" value="Male" />
@@ -30,21 +38,28 @@
                 <label for="Female">Female</label>
               </div>
             </div>
-            <input class="submit_btn" type="submit" value="Submit" onclick="sendToBaseUrl()"/>
+            <!-- add the submit button and make it do the sendToBaseUrl that define in js 
+            whenever the user click on submit button it runs-->
+            <input class="submit_btn" type="submit" value="Submit" onclick="sendToBaseUrl()" />
+            <!-- add the save button and make it do the save_name that define in js 
+            whenever the user click on save button it runs-->
             <button class="save_btn" onclick="save_name()">save</button>
           </form>
         </div>
-
+        <!-- the right side part for getting name and add Prediction and Saved Answers parts -->
         <div class="right_div">
           <div>
+            <!-- add the Prediction as a paragraf and show the gender and probability each time after clicking submit or save button -->
             <p class="prediction">Prediction</p>
             <p id="gender">gender</p>
             <p id="prob">probability</p>
           </div>
-
+          <!-- add the Saved Answers as a paragraf and show the gender each time after clicking  save button -->
           <div class="save-div" id="save-div-id">
             <p class="saved_answers" id="saved_answers_id">Saved Answers</p>
             <p id="save_gender">gender</p>
+            <!-- add the clear button and make it do the delete_saved_name that define in js 
+            whenever the user click on clear button it runs -->
             <button id="clear_btn" onclick="delete_saved_name()">clear</button>
           </div>
 
@@ -53,6 +68,7 @@
       </div>
     </div>
   </div>
+  <!-- add the script for function call externally in an javascript file -->
   <script src="./js/myscripts.js"></script>
 </body>
 
